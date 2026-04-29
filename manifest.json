@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "YC News Agent",
+  "version": "1.0",
+  "description": "An Agentic AI Chrome extension that summarizes, fact-checks, and discusses YCombinator / Hacker News stories using Gemini with autonomous tool use.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "YC News Agent"
+  },
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://hacker-news.firebaseio.com/*",
+    "https://hn.algolia.com/*",
+    "https://generativelanguage.googleapis.com/*",
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
